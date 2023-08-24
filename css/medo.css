@@ -1,0 +1,86 @@
+:root {
+    --main-transition: 0.3s;
+}
+
+body {
+    font-family: 'Roboto Slab', serif !important;
+}
+
+@media (max-width:400px) {
+    header .links {
+        margin: 0 !important;
+        padding: 5px;
+    }
+
+    ;
+
+    header .links li {
+        font-size: 14px;
+    }
+
+    ;
+}
+
+header .links li a:hover {
+    background-color: #1182e9;
+    color: white;
+    border-radius: 10px;
+    transition: none;
+}
+
+header .dropdown-menu li a:hover {
+    background-color: #1182e9;
+    color: white;
+    border-radius: 10px;
+    transition: none;
+}
+
+.landing-img img:hover {
+    filter: brightness(0.6);
+}
+
+.dots-up img {
+    width: 18%;
+    top: 13%;
+    right: 4%;
+}
+
+.dots-down img {
+    width: 18%;
+    bottom: 11%;
+    left: 4%;
+}
+
+.pris {
+    transition: var(--main-transition);
+}
+
+.pris::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 0;
+    width: 0;
+    transform: translate(-50%, -50%);
+    background: #ededed;
+    z-index: -1;
+    transition: var(--main-transition);
+}
+
+.pris:hover {
+    transform: translatey(-10px);
+}
+
+.pris:hover::before {
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    #break {
+        display: block !important;
+    }
+}
+
+;
